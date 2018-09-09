@@ -41,7 +41,7 @@ textarea {
     height: 200px;
     width: 99.5%;
     font-size: 1rem;
-    margin-right: 1%; /* for fieldset its throws off the right spacing by a bit when screen resizing */
+    margin-right: 1%; /* for fieldset its throws off the right spacing by a bit when screen resizes */
 }
 
 /*  BOTTOM  */

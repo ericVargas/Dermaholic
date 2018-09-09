@@ -14,13 +14,13 @@
            
             <!--Select regimen-->
             <div class="product">
-                <select name="prescriptions">
+                <select onchange="productSelect()">
                     <option value="" disabled selected>Select your prescription</option>
-                    <option id="dif" value="differin">Differin 0.1% Gel</option>
-                    <option id="cli" value="clindamycin">Clindamycin Lotion</option>
-                    <option id="mup" value="mupirocin">Mupirocin</option>
-                    <option id="duo" value="duofilm">Duofilm 17%</option>
-                    <option id="bpw" value="bpwash">Benzoyl Peroxide Wash</option>
+                    <option id="dif">Differin 0.1% Gel</option>
+                    <option id="cli">Clindamycin Lotion</option>
+                    <option id="mup">Mupirocin</option>
+                    <option id="duo">Duofilm 17%</option>
+                    <option id="bpw">Benzoyl Peroxide Wash</option>
                 </select>
             </div>
             
@@ -32,10 +32,10 @@
                 </form>
                 
                 <!--Seleced base intsructions-->
-                <form class="text" id="instruct">
+                <form class="text">
                     <fieldset>
                         <legend>Instructions</legend>
-                        <textarea>Steps... </textarea>
+                        <textarea id="instruct">Steps... </textarea>
                     </fieldset>
                 </form>
                 
