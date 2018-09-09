@@ -22,13 +22,34 @@
                 </select>
             </div>
             <div class="instructions">
-                <form>
+                <form class="time">
                     <input type="checkbox" name="time" value="am">AM
                     <input type="checkbox" name="time" value="pm">PM
                 </form>
-                <textarea rows="4" cols="50">Step 1. </textarea>
+                <form class="text" id="instruct">
+                    <fieldset>
+                        <legend>Instructions</legend>
+                        <textarea>Step 1. </textarea>
+                    </fieldset>
+                </form>
+                <form class="text" id="am">
+                    <fieldset>
+                        <legend>Morning</legend>
+                        <textarea>Step 1. </textarea>
+                    </fieldset>
+                </form>
+                <form class="text" id="pm">
+                    <fieldset>
+                        <legend>Evening</legend>
+                        <textarea>Step 1. </textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="print">
+                <button class="print">Print</button>
             </div>
         </div>
+        <footer>Eric Vargas &copy; 2018</footer>
     </div>
     <script src="js/script.js"></script>
 </body>
