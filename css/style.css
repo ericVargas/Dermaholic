@@ -41,14 +41,18 @@ textarea {
     height: 200px;
     width: 99.5%;
     font-size: 1rem;
-    margin-right: 1%; /* for fieldset its throws off the right spacing by a bit when screen resizes */
+    margin-right: 1%; /* for fieldset it throws off the right spacing by a bit when screen resizes */
 }
 
 /*  BOTTOM  */
-.print {
+.button {
+    margin: 0px auto;
+    text-align: center;
+}
+#print, #submit {
     height: 40px;
     width: 80px;
-    font-size: 25px;
+    font-size: 200px;
     margin: 0px auto;
     margin-bottom: 50px;
 }
@@ -68,5 +72,19 @@ footer {
 }
 
 #evening {
+    display: none;
+}
+
+#preview {
+    display: none;
+    height: 420px;
+    width: 300px;
+    background: white;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#print {
     display: none;
 }

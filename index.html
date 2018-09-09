@@ -43,7 +43,7 @@
                 <form class="text" id="morning">
                     <fieldset>
                         <legend>Morning</legend>
-                        <textarea>For the morning please do... </textarea>
+                        <textarea id="amText">For the morning please do... </textarea>
                     </fieldset>
                 </form>
                 
@@ -51,15 +51,29 @@
                 <form class="text" id="evening">
                     <fieldset>
                         <legend>Evening</legend>
-                        <textarea>For the evening please do... </textarea>
+                        <textarea id="pmText">For the evening please do... </textarea>
                     </fieldset>
                 </form>
             </div>
             
-            <!--Print button-->
-            <div class="print">
-                <button class="print">Print</button>
+            <!--Submit button-->
+            <div class="button">
+                <input type="button" id="submit" onclick="previewText()" value="Submit" />
             </div>
+            
+            <!--Preview area-->
+            <div id="preview">
+                <h2 id="name"></h2>
+                <h4 id="firstP"></h4>
+                <h4 id="secondP"></h4>
+                <h4 id="thirdP"></h4>
+            </div>
+            
+            <!--Print button-->
+            <div class="button">
+                <input type="button" id="print" onclick="printPreview()" value="Print" />
+            </div>
+             
         </div>
         <footer>Eric Vargas &copy; 2018</footer>
     </div>
