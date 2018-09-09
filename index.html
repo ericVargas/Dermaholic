@@ -9,16 +9,24 @@
 
 <body>
     <div id="container">
-        <div class="title">Dermaholic!!!</div>
+        <div class="title">Regimen</div>
         <div class="main">
             <div class="product">
                 <select name="prescriptions">
+                    <option value="" disabled selected>Select your prescriptions</option>
                     <option value="differin">Differin 0.1% Gel</option>
                     <option value="clindamycin">Clindamycin Lotion</option>
                     <option value="mupirocin">Mupirocin</option>
                     <option value="duofilm">Duofilm 17%</option>
                     <option value="bpwash">Benzoyl Peroxide Wash</option>
                 </select>
+            </div>
+            <div class="instructions">
+                <form>
+                    <input type="checkbox" name="time" value="am">AM
+                    <input type="checkbox" name="time" value="pm">PM
+                </form>
+                <textarea rows="4" cols="50">Step 1. </textarea>
             </div>
         </div>
     </div>
