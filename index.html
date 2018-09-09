@@ -11,40 +11,52 @@
     <div id="container">
         <div class="title">Regimen</div>
         <div class="main">
+           
+            <!--Select regimen-->
             <div class="product">
                 <select name="prescriptions">
-                    <option value="" disabled selected>Select your prescriptions</option>
-                    <option value="differin">Differin 0.1% Gel</option>
-                    <option value="clindamycin">Clindamycin Lotion</option>
-                    <option value="mupirocin">Mupirocin</option>
-                    <option value="duofilm">Duofilm 17%</option>
-                    <option value="bpwash">Benzoyl Peroxide Wash</option>
+                    <option value="" disabled selected>Select your prescription</option>
+                    <option id="dif" value="differin">Differin 0.1% Gel</option>
+                    <option id="cli" value="clindamycin">Clindamycin Lotion</option>
+                    <option id="mup" value="mupirocin">Mupirocin</option>
+                    <option id="duo" value="duofilm">Duofilm 17%</option>
+                    <option id="bpw" value="bpwash">Benzoyl Peroxide Wash</option>
                 </select>
             </div>
+            
+            <!--Instruction section-->
             <div class="instructions">
                 <form class="time">
-                    <input type="checkbox" name="time" value="am">AM
-                    <input type="checkbox" name="time" value="pm">PM
+                    <input type="checkbox" id="am" onclick="timeSteps()">AM
+                    <input type="checkbox" id="pm" onclick="timeSteps()">PM
                 </form>
+                
+                <!--Seleced base intsructions-->
                 <form class="text" id="instruct">
                     <fieldset>
                         <legend>Instructions</legend>
-                        <textarea>Step 1. </textarea>
+                        <textarea>Steps... </textarea>
                     </fieldset>
                 </form>
-                <form class="text" id="am">
+                
+                <!--AM instructions-->
+                <form class="text" id="morning">
                     <fieldset>
                         <legend>Morning</legend>
-                        <textarea>Step 1. </textarea>
+                        <textarea>For the morning please do... </textarea>
                     </fieldset>
                 </form>
-                <form class="text" id="pm">
+                
+                <!--PM instrutions-->
+                <form class="text" id="evening">
                     <fieldset>
                         <legend>Evening</legend>
-                        <textarea>Step 1. </textarea>
+                        <textarea>For the evening please do... </textarea>
                     </fieldset>
                 </form>
             </div>
+            
+            <!--Print button-->
             <div class="print">
                 <button class="print">Print</button>
             </div>
