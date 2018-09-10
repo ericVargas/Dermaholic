@@ -54,15 +54,15 @@ function timeSteps() {
 function productSelect() {
     if (dif.selected == true) {
         console.log('Dif selected');
-        instruct.innerHTML = "Differin 0.1% Gel";
+        instruct.innerHTML = "Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.";
 
     } else if (cli.selected == true) {
         console.log('Cli selected');
-        instruct.innerHTML = "Clindamycin Lotion";
+        instruct.innerHTML = 'Apply thin layer to "hot spots" every morning.';
 
     } else if (mup.selected == true) {
         console.log('Mup selected');
-        instruct.innerHTML = "Mupirocin";
+        instruct.innerHTML = "Apply twice a day to affected areas for 7-10 days.";
 
     } else if (duo.selected == true) {
         console.log('Duo selected');
@@ -70,14 +70,14 @@ function productSelect() {
 
     } else if (bpw.selected == true) {
         console.log('bpw selected');
-        instruct.innerHTML = "Benzoyl Peroxide Wash";
+        instruct.innerHTML = "Cleanse face every morning.";
 
     } else {
         console.log('None selected');
     }
 }
 
-//Preview submitted text to print
+// Preview submitted text to print
 function previewText() {
     if (dif.selected == true) {
         name.innerHTML = dif.innerHTML;
@@ -97,23 +97,35 @@ function previewText() {
     } else {
         console.log('No name');
     }
-    
+
     firstP.innerHTML = instruct.innerHTML;
-    
+
     if (am.checked == true && pm.checked == true) {
         secondP.innerHTML = amText.innerHTML;
-    thirdP.innerHTML = pmText.innerHTML;
+        thirdP.innerHTML = pmText.innerHTML;
 
     } else if (am.checked == true) {
         secondP.innerHTML = amText.innerHTML;
-    
+
     } else if (pm.checked == true) {
-    thirdP.innerHTML = pmText.innerHTML;
+        thirdP.innerHTML = pmText.innerHTML;
     } else {
         console.log('No time frame steps');
-        
+
     }
-    
+
     preview.style.display = "block";
     print.style.display = "block";
+}
+
+// Print information
+function printPreview(divName) {
+    let printContents = document.getElementById(divName).innerHTML;
+    let ogContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+
+    window.print();
+
+    document.body.innerHTML = ogContents;
 }
