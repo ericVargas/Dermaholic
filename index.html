@@ -14,7 +14,7 @@
 
             <!--Select regimen-->
             <div class="product">
-                <select onchange="productSelect()">
+                <select ><!--onchange="productSelect()"-->
                     <option value="" disabled selected>Select your prescription</option>
                     <option id="dif">Differin 0.1% Gel</option>
                     <option id="cli">Clindamycin Lotion</option>
@@ -30,32 +30,8 @@
                     <input type="checkbox" id="am" onclick="timeSteps()">AM
                     <input type="checkbox" id="pm" onclick="timeSteps()">PM
                 </form>
-
-                <!--Seleced base intsructions-->
-                <form class="text">
-                    <fieldset>
-                        <legend>Instructions</legend>
-                        <textarea id="instruct">Steps... </textarea>
-                    </fieldset>
-                </form>
-
-                <!--AM instructions-->
-                <form class="text" id="morning">
-                    <fieldset>
-                        <legend>Morning</legend>
-                        <textarea id="amText">For the morning please do... </textarea>
-                    </fieldset>
-                </form>
-
-                <!--PM instrutions-->
-                <form class="text" id="evening">
-                    <fieldset>
-                        <legend>Evening</legend>
-                        <textarea id="pmText">For the evening please do... </textarea>
-                    </fieldset>
-                </form>
             </div>
-
+           
             <!--Submit button-->
             <div class="button">
                 <input type="button" id="submit" onclick="previewText()" value="Submit" />
@@ -64,10 +40,10 @@
             <!--Preview area-->
             <div id="preview">
                 <h2 id="name"></h2>
-                <h4 id="firstP"></h4>
-                <h4 id="secondP"></h4>
-                <br>
-                <h4 id="thirdP"></h4>
+                <h4 id="amText">For the morning:</h4>
+                <h4 id="pmText">For the evening:</h4>
+                <h4 id="bothText">For both morning and evening:</h4>
+                <h4 id="instruct"></h4>
             </div>
 
             <!--Print button-->
@@ -79,8 +55,6 @@
         <footer>Eric Vargas &copy; 2018</footer>
     </div>
     <script src="js/script.js"></script>
-<!--    <script src="js/app.js"></script>-->
-    <script type="text/javascript" src="node_modules/auth0-js/build/auth0.js"></script>
 </body>
 
 </html>

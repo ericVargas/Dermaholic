@@ -1,9 +1,3 @@
-// Time frame checkbox and textarea
-let am = document.querySelector("#am");
-let pm = document.querySelector("#pm");
-let morning = document.querySelector("#morning");
-let evening = document.querySelector("#evening");
-
 // Different products
 let dif = document.querySelector("#dif");
 let cli = document.querySelector("#cli");
@@ -11,17 +5,17 @@ let mup = document.querySelector("#mup");
 let duo = document.querySelector("#duo");
 let bpw = document.querySelector("#bpw");
 
-// Texts
-let instruct = document.querySelector("#instruct");
-let amText = document.getElementById("amText");
-let pmText = document.getElementById("pmText");
+// Time frame checkbox
+let am = document.querySelector("#am");
+let pm = document.querySelector("#pm");
 
 // Preview area
 let preview = document.querySelector("#preview");
 let name = document.querySelector("#name");
-let firstP = document.querySelector("#firstP");
-let secondP = document.querySelector("#secondP");
-let thirdP = document.querySelector("#thirdP");
+let amText = document.getElementById("amText");
+let pmText = document.getElementById("pmText");
+let bothText = document.getElementById("bothText");
+let instruct = document.querySelector("#instruct");
 let print = document.querySelector("#print");
 
 
@@ -29,51 +23,27 @@ let print = document.querySelector("#print");
 function timeSteps() {
     if (am.checked == true && pm.checked == true) {
         console.log('Both checked');
-        morning.style.display = "block";
-        evening.style.display = "block";
+        bothText.style.display = "block";
+        amText.style.display = "none";
+        pmText.style.display = "none";
 
     } else if (am.checked == true) {
         console.log('AM checked');
-        morning.style.display = "block";
-        evening.style.display = "none";
+        amText.style.display = "block";
+        pmText.style.display = "none";
+        bothText.style.display = "none";
 
     } else if (pm.checked == true) {
         console.log('PM checked');
-        evening.style.display = "block";
-        morning.style.display = "none";
+        pmText.style.display = "block";
+        amText.style.display = "none";
+        bothText.style.display = "none";
 
     } else {
         console.log('None checked');
-        morning.style.display = "none";
-        evening.style.display = "none";
-    }
-}
-
-
-// Display preset instructions for prescription
-function productSelect() {
-    if (dif.selected == true) {
-        console.log('Dif selected');
-        instruct.innerHTML = "Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.";
-
-    } else if (cli.selected == true) {
-        console.log('Cli selected');
-        instruct.innerHTML = 'Apply thin layer to "hot spots" every morning.';
-
-    } else if (mup.selected == true) {
-        console.log('Mup selected');
-        instruct.innerHTML = "Apply twice a day to affected areas for 7-10 days.";
-
-    } else if (duo.selected == true) {
-        console.log('Duo selected');
-        instruct.innerHTML = "Duofilm 17%";
-
-    } else if (bpw.selected == true) {
-        console.log('bpw selected');
-        instruct.innerHTML = "Cleanse face every morning.";
-
-    } else {
-        console.log('None selected');
+        amText.style.display = "none";
+        pmText.style.display = "none";
+        bothText.style.display = "none";
     }
 }
 
@@ -98,22 +68,33 @@ function previewText() {
         console.log('No name');
     }
 
-    firstP.innerHTML = instruct.innerHTML;
+// Display preset instructions for prescription
+//function productSelect() {
+    if (dif.selected == true) {
+        console.log('Dif selected');
+        instruct.innerHTML = "Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.";
 
-    if (am.checked == true && pm.checked == true) {
-        secondP.innerHTML = amText.innerHTML;
-        thirdP.innerHTML = pmText.innerHTML;
+    } else if (cli.selected == true) {
+        console.log('Cli selected');
+        instruct.innerHTML = 'Apply thin layer to "hot spots" every morning.';
 
-    } else if (am.checked == true) {
-        secondP.innerHTML = amText.innerHTML;
+    } else if (mup.selected == true) {
+        console.log('Mup selected');
+        instruct.innerHTML = "Apply twice a day to affected areas for 7-10 days.";
 
-    } else if (pm.checked == true) {
-        thirdP.innerHTML = pmText.innerHTML;
+    } else if (duo.selected == true) {
+        console.log('Duo selected');
+        instruct.innerHTML = "Duofilm 17%";
+
+    } else if (bpw.selected == true) {
+        console.log('bpw selected');
+        instruct.innerHTML = "Cleanse face every morning.";
+
     } else {
-        console.log('No time frame steps');
-
+        console.log('None selected');
     }
-
+// }
+    
     preview.style.display = "block";
     print.style.display = "block";
 }
