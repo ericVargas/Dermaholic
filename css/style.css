@@ -1,10 +1,15 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: #3d3d3d
 }
 
 /*  TOP  */
 .title {
-    color: white;
+    color: #ffffff;
     text-align: center;
     font-size: 55px;
     padding: 15px;
@@ -23,7 +28,7 @@ body {
 
 .time {
     text-align: center;
-    color: white;
+    color: #ffffff;
     font-size: 1rem;
     padding-bottom: 15px;
 }
@@ -33,7 +38,9 @@ body {
     margin: 0px auto;
     text-align: center;
 }
-#print, #submit {
+
+#print,
+#submit {
     height: 40px;
     width: 80px;
     font-size: 200px;
@@ -47,20 +54,26 @@ footer {
     line-height: inherit;
     text-align: center;
     padding: 5px;
-    margin: auto 0;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    width: 97%;
+    margin-bottom: -8px;
 }
 
 /*  HIDDEN  */
 
-#amText, #pmText, #bothText {
+#amText,
+#pmText,
+#bothText {
     display: none;
 }
 
 #preview {
     display: none;
-    height: 420px;
-    width: 300px;
-    background: white;
+    height: 300px;
+    width: 500px;
+    background: #ffffff;
     padding: 15px;
     margin: auto;
     margin-bottom: 50px;
@@ -69,3 +82,38 @@ footer {
 #print {
     display: none;
 }
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { body {
+        background-color: lightblue;
+    }
+
+    #container {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    #preview {
+        width: 100%;
+        padding: 5px;
+    } }
+/*
+@media (max-width: 570px) {
+    body {
+        background-color: lightblue;
+    }
+
+    #container {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    #preview {
+        width: 100%;
+        padding: 5px;
+    }
+}*/
