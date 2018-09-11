@@ -12,9 +12,9 @@ let pm = document.querySelector("#pm");
 // Preview area
 let preview = document.querySelector("#preview");
 let name = document.querySelector("#name");
-let amText = document.getElementById("amText");
-let pmText = document.getElementById("pmText");
-let bothText = document.getElementById("bothText");
+let amText = document.querySelector("#amText");
+let pmText = document.querySelector("#pmText");
+let bothText = document.querySelector("#bothText");
 let instruct = document.querySelector("#instruct");
 let print = document.querySelector("#print");
 
