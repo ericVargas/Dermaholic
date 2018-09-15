@@ -12,26 +12,37 @@
         <div class="title">Regimen</div>
         <div class="main">
 
-            <!--Select regimen-->
-            <div class="product">
-                <select ><!--onchange="productSelect()"-->
-                    <option value="" disabled selected>Select your prescription</option>
-                    <option id="dif">Differin 0.1% Gel</option>
-                    <option id="cli">Clindamycin Lotion</option>
-                    <option id="mup">Mupirocin</option>
-                    <option id="duo">Duofilm 17%</option>
-                    <option id="bpw">Benzoyl Peroxide Wash</option>
-                </select>
-            </div>
+            <!--extra-->
+            <form class="product">
+                <fieldset>
+                    <legend>Products</legend>
+                    <table>
+                        <tr>
+                            <td id="dif">Differin 0.1% Gel</td>
+                            <td><input type="checkbox" id="cliAM">AM <input type="checkbox" id="difPM">PM</td>
+                            <td id="sun">Sunscreen <input type="checkbox" id="sunAM">AM <input type="checkbox" id="sunPM">PM</td>
+                        </tr>
+                        <tr>
+                            <td id="cli">Clindamycin Lotion</td>
+                            <td><input type="checkbox" id="cliAM">AM <input type="checkbox" id="cliPM">PM</td>
+                            <td id="cmt">Additional Comments <input type="checkbox" id="comments"></td>
+                        </tr>
+                        <tr>
+                            <td id="mup">Mupirocin</td>
+                            <td><input type="checkbox" id="mupAM">AM <input type="checkbox" id="mupPM">PM</td>
+                        </tr>
+                        <tr>
+                            <td id="duo">Duofilm 17%</td>
+                            <td><input type="checkbox" id="duoAM">AM <input type="checkbox" id="duoPM">PM</td>
+                        </tr>
+                        <tr>
+                            <td id="bpw">Benzoyl Peroxide Wash</td>
+                            <td><input type="checkbox" id="bpwAM">AM <input type="checkbox" id="bpwPM">PM</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
 
-            <!--Instruction section-->
-            <div class="instructions">
-                <form class="time">
-                    <input type="checkbox" id="am" onclick="timeSteps()">AM
-                    <input type="checkbox" id="pm" onclick="timeSteps()">PM
-                </form>
-            </div>
-           
             <!--Submit button-->
             <div class="button">
                 <input type="button" id="submit" onclick="previewText()" value="Submit" />
@@ -52,7 +63,9 @@
             </div>
 
         </div>
-        <footer>Eric Vargas &copy; 2018</footer>
+        <div class="footer">
+            <footer>Eric Vargas &copy; 2018</footer>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
