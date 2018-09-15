@@ -17,6 +17,11 @@ body {
 }
 
 /*  MIDDLE  */
+.timeframe {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
 .product {
     width: 650px;
     padding-top: 20px;
@@ -26,39 +31,29 @@ body {
     margin-bottom: 50px;
 }
 
-table {
+.list {
     width: 100%;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
-td {
-    border-bottom: 2px solid #c1c1c1;
+/* To move grid position to line up*/
+#duo {
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
+
+/*
+#dif, #cli, #mup, #duo, #bpw{
+    border-bottom: 1px solid #c1c1c1;
+}
+*/
 
 #sun,
 #cmt {
     text-align: right;
     border-bottom: none;
 }
-
-/*
-.product {
-    line-height: 20px;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.instructions {
-    padding: 30px;
-}
-
-.time {
-    text-align: center;
-    color: #ffffff;
-    font-size: 1rem;
-    padding-bottom: 15px;
-}
-*/
 
 /*  BOTTOM  */
 .button {
@@ -95,9 +90,9 @@ footer {
 }
 
 /*  HIDDEN  */
-#amText,
-#pmText,
-#bothText {
+.morning,
+.evening,
+.cmtText {
     display: none;
 }
 

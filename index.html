@@ -11,35 +11,61 @@
     <div id="container">
         <div class="title">Regimen</div>
         <div class="main">
-
-            <!--extra-->
+           
+            <div class="timeframe">
+                <select>
+                    <!--onchange="timeSelect()"-->
+                    <option value="" disabled selected>Select Timeframes</option>
+                    <option id="amTF">Morning</option>
+                    <option id="pmTF">Evening</option>
+                    <option id="bothTF">Both</option>
+                </select>
+            </div>
+            
             <form class="product">
                 <fieldset>
                     <legend>Products</legend>
-                    <table>
-                        <tr>
-                            <td id="dif">Differin 0.1% Gel</td>
-                            <td><input type="checkbox" id="cliAM">AM <input type="checkbox" id="difPM">PM</td>
-                            <td id="sun">Sunscreen <input type="checkbox" id="sunAM">AM <input type="checkbox" id="sunPM">PM</td>
-                        </tr>
-                        <tr>
-                            <td id="cli">Clindamycin Lotion</td>
-                            <td><input type="checkbox" id="cliAM">AM <input type="checkbox" id="cliPM">PM</td>
-                            <td id="cmt">Additional Comments <input type="checkbox" id="comments"></td>
-                        </tr>
-                        <tr>
-                            <td id="mup">Mupirocin</td>
-                            <td><input type="checkbox" id="mupAM">AM <input type="checkbox" id="mupPM">PM</td>
-                        </tr>
-                        <tr>
-                            <td id="duo">Duofilm 17%</td>
-                            <td><input type="checkbox" id="duoAM">AM <input type="checkbox" id="duoPM">PM</td>
-                        </tr>
-                        <tr>
-                            <td id="bpw">Benzoyl Peroxide Wash</td>
-                            <td><input type="checkbox" id="bpwAM">AM <input type="checkbox" id="bpwPM">PM</td>
-                        </tr>
-                    </table>
+                    <div class="list">
+
+                        <div id="dif">Differin 0.1% Gel</div>
+                        <span class="time">
+                            <input type="checkbox" id="difAM" class="am">AM
+                            <input type="checkbox" id="difPM" class="pm">PM
+                        </span>
+                        <span class="time" id="sun">Sunscreen
+                            <input type="checkbox" id="sunAM" class="am">AM
+                            <input type="checkbox" id="sunPM" class="pm">PM
+                        </span>
+
+                        <div id="cli">Clindamycin Lotion</div>
+                        <span class="time">
+                            <input type="checkbox" id="cliAM" class="am">AM
+                            <input type="checkbox" id="cliPM" class="pm">PM
+                        </span>
+                        <span id="cmt">Additional Comments
+                            <input type="checkbox" id="comments">
+                        </span>
+
+                        <div id="mup">Mupirocin</div>
+                        <span class="time">
+                            <input type="checkbox" id="mupAM" class="am">AM
+                            <input type="checkbox" id="mupPM" class="pm">PM
+                        </span>
+
+                        <div id="duo">Duofilm 17%</div>
+                        <span class="time">
+                            <input type="checkbox" id="duoAM" class="am">AM
+                            <input type="checkbox" id="duoPM" class="pm">PM
+                        </span>
+                        <br> <!-- Grid poistion break -->
+
+                        <div id="bpw">Benzoyl Peroxide Wash</div>
+                        <span class="time">
+                            <input type="checkbox" id="bpwAM" class="am">AM
+                            <input type="checkbox" id="bpwPM" class="pm">PM
+                        </span>
+
+                    </div>
                 </fieldset>
             </form>
 
@@ -50,11 +76,38 @@
 
             <!--Preview area-->
             <div id="preview">
-                <h1 id="name"></h1>
-                <h3 id="amText">For the morning:</h3>
-                <h3 id="pmText">For the evening:</h3>
-                <h3 id="bothText">For both morning and evening:</h3>
-                <h3 id="instruct"></h3>
+                <div class="morning">
+                    <h3 id="amText">For the morning:</h3>
+                    <ul id="amList">
+                        <li>
+                            <p></p>
+                        </li>
+                        <li>
+                            <p></p>
+                        </li>
+                        <li>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="evening">
+                    <h3 id="pmText">For the evening:</h3>
+                    <ul id="pmList">
+                        <li>
+                            <p></p>
+                        </li>
+                        <li>
+                            <p></p>
+                        </li>
+                        <li>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cmtText">
+                    <h3>Comments:</h3>
+                </div>
+                <!--                <h3 id="instruct"></h3>-->
             </div>
 
             <!--Print button-->
