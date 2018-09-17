@@ -79,9 +79,9 @@ function displaySun() {
     if (sunText.checked == true) {
         console.log('sunscreen checked');
         let li = document.createElement("LI");
-    let liText = document.createTextNode("Apply sunscreen. If outside for extended amounts of time, reapply sunscreen every 2 hours.");
-    li.appendChild(liText);
-    amList.appendChild(li);
+        let liText = document.createTextNode("Apply sunscreen. If outside for extended amounts of time, reapply sunscreen every 2 hours.");
+        li.appendChild(liText);
+        amList.appendChild(li);
     } else {
         console.log('No sunscreen');
     }
@@ -91,8 +91,23 @@ function displaySun() {
 // Checks which Differin box is checked to display
 function difChecked() {
     let li = document.createElement("LI");
-    let liText = document.createTextNode("Differin 0.1% Gel - Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.");
+    let liText = document.createTextNode("Differin 0.1% Gel - Apply pea size amount to full dry face after cleansing.");
+    
+    let ul = document.createElement("UL");
+    let li1 = document.createElement("LI");
+    let liText1 = document.createTextNode("Avoid applying directly to under eyes, corners of mouth and creases of nose.");
+    
+    let li2 = document.createElement("LI");
+    let liText2 = document.createTextNode("Start every other night and increase to nightly as tolerated.");
+    
     li.appendChild(liText);
+    li1.appendChild(liText1);
+    li2.appendChild(liText2);
+    li.appendChild(ul);
+    ul.setAttribute("class", "difUL");
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    
     
     if (difAM.checked == true && difPM.checked == true) {
         console.log('Both dif tf');
