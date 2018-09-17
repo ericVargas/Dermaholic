@@ -168,7 +168,7 @@ function mupChecked() {
         console.log('mupAM');
         amList.appendChild(li);
 
-    } else if (cliPM.checked == true) {
+    } else if (mupPM.checked == true) {
         console.log('mupPM');
         pmList.appendChild(li);
 
