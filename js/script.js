@@ -1,10 +1,3 @@
-// Different products
-let dif = document.querySelector("#dif");
-let cli = document.querySelector("#cli");
-let mup = document.querySelector("#mup");
-let duo = document.querySelector("#duo");
-let bpw = document.querySelector("#bpw");
-
 // Timeframe text selection
 let amTF = document.querySelector("#amTF");
 let pmTF = document.querySelector("#pmTF");
@@ -26,8 +19,10 @@ let duoPM = document.querySelector("#duoPM");
 let bpwAM = document.querySelector("#bpwAM");
 let bpwPM = document.querySelector("#bpwPM");
 
-let sunAM = document.querySelector("#sunAM");
-let sunPM = document.querySelector("#sunPM");
+let niaAM = document.querySelector("#niaAM");
+let niaPM = document.querySelector("#niaPM");
+
+let sunText = document.querySelector("#sunText");
 
 let comments = document.querySelector("#comments");
 
@@ -79,10 +74,24 @@ function displayCmt() {
 }
 
 
-// Checks which dif box is checked to display
+// Add sunscreen to morning routine
+function displaySun() {
+    if (sunText.checked == true) {
+        console.log('sunscreen checked');
+        let li = document.createElement("LI");
+    let liText = document.createTextNode("Apply sunscreen. If outside for extended amounts of time, reapply sunscreen every 2 hours.");
+    li.appendChild(liText);
+    amList.appendChild(li);
+    } else {
+        console.log('No sunscreen');
+    }
+}
+
+
+// Checks which Differin box is checked to display
 function difChecked() {
     let li = document.createElement("LI");
-    let liText = document.createTextNode('Clindamycin Lotion - Apply thin layer to "hot spots" every morning.');
+    let liText = document.createTextNode("Differin 0.1% Gel - Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.");
     li.appendChild(liText);
     
     if (difAM.checked == true && difPM.checked == true) {
@@ -104,10 +113,10 @@ function difChecked() {
 }
 
 
-// Checks which cli box is checked to display
+// Checks which Clindamycin box is checked to display
 function cliChecked() {
     let li = document.createElement("LI");
-    let liText = document.createTextNode("Differin 0.1% Gel - Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.");
+    let liText = document.createTextNode('Clindamycin Lotion - Apply thin layer to "hot spots".');
     li.appendChild(liText);
     
     if (cliAM.checked == true && cliPM.checked == true) {
@@ -129,107 +138,109 @@ function cliChecked() {
 }
 
 
+// Checks which Mupirocin box is checked to display
+function mupChecked() {
+    let li = document.createElement("LI");
+    let liText = document.createTextNode("Mupirocin - Apply twice a day to affected areas for 7-10 days.");
+    li.appendChild(liText);
+    
+    if (mupAM.checked == true && mupPM.checked == true) {
+        console.log('Both mup tf');
+        amList.appendChild(li);
+        pmList.appendChild(li);
+        
+    } else if (mupAM.checked == true) {
+        console.log('mupAM');
+        amList.appendChild(li);
+
+    } else if (cliPM.checked == true) {
+        console.log('mupPM');
+        pmList.appendChild(li);
+
+    } else {
+        console.log('No mup');
+    }
+}
 
 
+// Checks which Duofilm box is checked to display
+function duoChecked() {
+    let li = document.createElement("LI");
+    let liText = document.createTextNode("Duofilm 17% - ");
+    li.appendChild(liText);
+    
+    if (duoAM.checked == true && duoPM.checked == true) {
+        console.log('Both duo tf');
+        amList.appendChild(li);
+        pmList.appendChild(li);
+        
+    } else if (duoAM.checked == true) {
+        console.log('duoAM');
+        amList.appendChild(li);
+
+    } else if (duoPM.checked == true) {
+        console.log('duoPM');
+        pmList.appendChild(li);
+
+    } else {
+        console.log('No duo');
+    }
+}
 
 
+// Checks which Benzoyl Peroxide box is checked to display
+function bpwChecked() {
+    let li = document.createElement("LI");
+    let liText = document.createTextNode("Benzoyl Peroxide Wash - Cleanse face every morning.");
+    li.appendChild(liText);
+    
+    if (bpwAM.checked == true && bpwPM.checked == true) {
+        console.log('Both bpw tf');
+        amList.appendChild(li);
+        pmList.appendChild(li);
+        
+    } else if (bpwAM.checked == true) {
+        console.log('bpwAM');
+        amList.appendChild(li);
+
+    } else if (bpwPM.checked == true) {
+        console.log('bpwPM');
+        pmList.appendChild(li);
+
+    } else {
+        console.log('No bpw');
+    }
+}
 
 
+// Checks which NIA 24 box is checked to display
+function niaChecked() {
+    let li = document.createElement("LI");
+    let liText = document.createTextNode("Apply NIA 24 exfoiating scrub 2-3 times a week nightly.");
+    li.appendChild(liText);
+    
+    if (niaAM.checked == true && niaPM.checked == true) {
+        console.log('Both nia tf');
+        amList.appendChild(li);
+        pmList.appendChild(li);
+        
+    } else if (niaAM.checked == true) {
+        console.log('niaAM');
+        amList.appendChild(li);
 
+    } else if (niaPM.checked == true) {
+        console.log('niaPM');
+        pmList.appendChild(li);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// onclick="difChecked()"
-
-
-
-
-
-
-// Display preset instructions for prescription
-//function productSelect() {
-//    if (dif.selected == true) {
-//        console.log('Dif selected');
-//        instruct.innerHTML = "Apply pea size amount to full dry face after cleansing. Avoid applying directly to under eyes, corners of mouth and creases of nose. Start every other night and increase to nightly as tolerated.";
-//
-//    } else if (cli.selected == true) {
-//        console.log('Cli selected');
-//        instruct.innerHTML = 'Apply thin layer to "hot spots" every morning.';
-//
-//    } else if (mup.selected == true) {
-//        console.log('Mup selected');
-//        instruct.innerHTML = "Apply twice a day to affected areas for 7-10 days.";
-//
-//    } else if (duo.selected == true) {
-//        console.log('Duo selected');
-//        instruct.innerHTML = "Duofilm 17%";
-//
-//    } else if (bpw.selected == true) {
-//        console.log('bpw selected');
-//        instruct.innerHTML = "Cleanse face every morning.";
-//
-//    } else {
-//        console.log('None selected');
-//    }
-//}
-
-
-
-
-
-
-
+    } else {
+        console.log('No nia');
+    }
+}
 
 
 // Preview submitted text to print
 function previewText() {
-    //    if (dif.selected == true) {
-    //        name.innerHTML = dif.innerHTML;
-    //
-    //    } else if (cli.selected == true) {
-    //        name.innerHTML = cli.innerHTML;
-    //
-    //    } else if (mup.selected == true) {
-    //        name.innerHTML = mup.innerHTML;
-    //
-    //    } else if (duo.selected == true) {
-    //        name.innerHTML = duo.innerHTML;
-    //
-    //    } else if (bpw.selected == true) {
-    //        name.innerHTML = bpw.innerHTML;
-    //
-    //    } else {
-    //        console.log('No name');
-    //    }
-    
-    
+    displaySun();
     displayCmt();
     preview.style.display = "block";
     print.style.display = "block";

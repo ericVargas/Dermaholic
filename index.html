@@ -10,7 +10,7 @@
 <body>
     <div id="container">
         <div class="title">Regimen</div>
-        
+
         <!-- Selectable time frame -->
         <div class="timeframe">
             <select onchange="timeSelect()">
@@ -21,49 +21,56 @@
             </select>
         </div>
         <div class="main">
-            
+
             <!-- Product list with time frame checkboxes -->
             <!-- remove class time and product IDs-->
             <form class="product">
                 <fieldset>
                     <legend>Products</legend>
                     <div class="list">
-                        <div id="dif">Differin 0.1% Gel</div>
+                        <div>Differin 0.1% Gel</div>
                         <span class="time">
-                            <input type="checkbox" id="difAM" class="am" onclick="difChecked()">AM
-                            <input type="checkbox" id="difPM" class="pm" onclick="difChecked()">PM
+                            <input type="checkbox" id="difAM" onclick="difChecked()">AM
+                            <input type="checkbox" id="difPM" onclick="difChecked()">PM
                         </span>
-                        <span class="time" id="sun">Sunscreen
-                            <input type="checkbox" id="sunAM" class="am" >AM
-                            <input type="checkbox" id="sunPM" class="pm">PM
+                        <span id="sun">Sunscreen
+                            <input type="checkbox" id="sunText">
                         </span>
 
-                        <div id="cli">Clindamycin Lotion</div>
+                        <div>Clindamycin Lotion</div>
                         <span class="time">
-                            <input type="checkbox" id="cliAM" class="am" onclick="cliChecked()">AM
-                            <input type="checkbox" id="cliPM" class="pm" onclick="cliChecked()">PM
+                            <input type="checkbox" id="cliAM" onclick="cliChecked()">AM
+                            <input type="checkbox" id="cliPM" onclick="cliChecked()">PM
                         </span>
                         <span id="cmt">Additional Comments
                             <input type="checkbox" id="comments">
                         </span>
 
-                        <div id="mup">Mupirocin</div>
+                        <div>Mupirocin</div>
                         <span class="time">
-                            <input type="checkbox" id="mupAM" class="am">AM
-                            <input type="checkbox" id="mupPM" class="pm">PM
-                        </span>
-
-                        <div id="duo">Duofilm 17%</div>
-                        <span class="time">
-                            <input type="checkbox" id="duoAM" class="am">AM
-                            <input type="checkbox" id="duoPM" class="pm">PM
+                            <input type="checkbox" id="mupAM" onclick="mupChecked()">AM
+                            <input type="checkbox" id="mupPM" onclick="mupChecked()">PM
                         </span>
                         <br> <!-- Grid poistion break -->
 
-                        <div id="bpw">Benzoyl Peroxide Wash</div>
+                        <div>Duofilm 17%</div>
                         <span class="time">
-                            <input type="checkbox" id="bpwAM" class="am">AM
-                            <input type="checkbox" id="bpwPM" class="pm">PM
+                            <input type="checkbox" id="duoAM" onclick="duoChecked()">AM
+                            <input type="checkbox" id="duoPM" onclick="duoChecked()">PM
+                        </span>
+                        <br> <!-- Grid poistion break -->
+
+                        <div>Benzoyl Peroxide Wash</div>
+                        <span class="time">
+                            <input type="checkbox" id="bpwAM" onclick="bpwChecked()">AM
+                            <input type="checkbox" id="bpwPM" onclick="bpwChecked()">PM
+                        </span>
+                        <br> <!-- Grid poistion break -->
+                        
+                        <div>NIA 24</div>
+                        <span class="time">
+                            <input type="checkbox" id="niaAM" onclick="niaChecked()">AM
+                            <input type="checkbox" id="niaPM" onclick="niaChecked()">PM
                         </span>
                     </div>
                 </fieldset>
@@ -93,6 +100,14 @@
             <div class="button">
                 <input type="button" id="print" onclick="printPreview('preview')" value="Print" />
             </div>
+
+            <style media="print"> /*trying to remove domian name on page */
+                @page {
+                    size: auto;
+                    margin: 0;
+                }
+            </style>
+
 
         </div>
         <div class="footer">
