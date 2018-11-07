@@ -1,7 +1,13 @@
+* {
+    margin: 0;
+/*    padding: 0;*/
+    font-family: 'Fira Sans', sans-serif;
+}
+
 html,
 body {
-    /*    height: 100%;*/
-    margin: 0;
+    height: 100%;
+
 }
 
 body {
@@ -12,31 +18,52 @@ body {
 .title {
     color: #ffffff;
     text-align: center;
-    font-size: 55px;
+    font-size: 3rem;
     padding: 15px;
 }
 
 .timeframe {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
+    display: grid;
+    justify-items: center;
+    margin: 20px 0;
+}
+
+.timeframe select {
+    font-size: 1rem;
+    background: #c3c3c3;
+}
+
+.blink {
+    color: #fff;
+    padding-top: 10px;
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
 
 /*  MIDDLE  */
 .product {
     width: 650px;
-    color: #ffffff;
+    color: #fff;
     margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 50px;
 }
 
 .list {
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: auto auto auto;
     /*  browser support IE/Edge (<15)  */
+    display: -ms-grid;
     -ms-grid-columns: auto auto auto;
+    /*    justify-items: end;*/
+    font-size: 1.1rem;
+    margin: 20px auto;
 }
 
 /* Grid position to line up*/
@@ -66,14 +93,14 @@ input {
 
 #print,
 #submit {
-    font: 1rem 'Fira Sans', sans-serif;
+    font-size: 1rem;
     padding: .5rem;
     background: #c3c3c3;
     border: none;
     border-radius: 4px;
     height: 40px;
     width: 80px;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0px auto;
     margin-bottom: 50px;
 }
@@ -88,21 +115,10 @@ li {
 
 footer {
     background-color: #c3c3c3;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: inherit;
     text-align: center;
-    padding: 5px;
-    /*
-
-
-    position: absolute;
-    left: 0;
-    -8px;  to remove body margin: 8px 
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 15px;
-*/
+    padding: 10px;
 }
 
 /*  HIDDEN  */
@@ -121,6 +137,12 @@ footer {
     margin: auto;
     margin-bottom: 50px;
 }
+
+/*
+h3 {
+    margin: 10px;
+}
+*/
 
 #print {
     display: none;
