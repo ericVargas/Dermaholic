@@ -1,6 +1,6 @@
 * {
     margin: 0;
-/*    padding: 0;*/
+    /*    padding: 0;*/
     font-family: 'Fira Sans', sans-serif;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 /*  Sign In  */
-.sign-in {
+.signIn {
     color: #fff;
     width: 350px;
     margin: 0 auto;
@@ -24,12 +24,12 @@ body {
     font-size: 1.2rem;
 }
 
-.sign-in h3 {
+.signIn h3 {
     text-align: center;
     margin-bottom: 15px;
 }
 
-.sign-in input {
+.signIn input {
     display: block;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -41,7 +41,7 @@ body {
     transition: 0.3s;
 }
 
-.sign-in button {
+.signIn button {
     display: block;
     width: 100%;
     padding: .5rem;
@@ -49,10 +49,10 @@ body {
     border: 1px solid #c3c3c3;
     border-radius: 5px;
     font-size: inherit;
-    
+
 }
 
-.sign-in button:hover {
+.signIn button:hover {
     background-color: #eee;
     border: 1px solid #c3c3c3;
     cursor: pointer;
@@ -65,7 +65,7 @@ body {
 
 
 
-.logged-in {
+.loggedIn {
     display: none;
 }
 

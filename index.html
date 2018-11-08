@@ -8,27 +8,20 @@
 </head>
 
 <body>
-  <!-- Login In Landing Page -->
-   <div class="sign-in">
-       <h3>Welcome to Regimen</h3>
-       <input id="emailInput" type="email" placeholder="Email.."/>
-       <input id="passInput" type="password" placeholder="Password.."/>
-       <button onclick="login()">Login In</button>
-   </div>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-       <!-- Actual Web App -->
-       <div class="logged-in">
+    <!-- Login In Landing Page -->
+    <div class="signIn">
+        <h3>Welcome to Regimen</h3>
+        <input id="emailInput" type="email" placeholder="Email.." />
+        <input id="passInput" type="password" placeholder="Password.." />
+        <button class="bIn" onclick="login()">Login In</button>
+    </div>
+
+    <!-- Actual Web App -->
+    <div class="loggedIn">
+        <div class="signOut">
+            <span id="user"></span>
+            <button class="bOut" onclick="logout()">Sign Out</button>
+        </div>
         <div class="title">Regimen</div>
 
         <!-- Selectable time frame -->

@@ -1,3 +1,42 @@
+// Using firebase to login in web app
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        // User is signed in.
+        document.getElementsByClassName("loggedIn").style.display = "block";
+        document.getElementsByClassName("signIn").style.display = "none";
+
+        let user = firebase.auth().currentUser;
+
+        if (user != null) {
+            let emailId = user.email;
+            document.getElementById("user").innerHTML = "Hey " + emailId;
+        }
+
+    } else {
+        // No user is signed in.
+        document.getElementsByClassName("loggedIn").style.display = "none";
+        document.getElementsByClassName("signIn").style.display = "block";
+    }
+});
+
+function login() {
+    let userEmail = document.getElementById("emailInput").value;
+    let userPass = document.getElementById("passInput").value;
+
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        // Handle Errors here.
+        let errorCode = error.code;
+        let errorMessage = error.message;
+
+        window.alert("Error : " + errorMessage);
+    });
+}
+
+function logout() {
+    firebase.auth().signOut();
+}
+
+
 // Timeframe text selection
 let amTF = document.querySelector("#amTF");
 let pmTF = document.querySelector("#pmTF");
