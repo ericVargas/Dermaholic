@@ -41,7 +41,7 @@ body {
     transition: 0.3s;
 }
 
-.signIn button {
+.bIn {
     display: block;
     width: 100%;
     padding: .5rem;
@@ -52,21 +52,21 @@ body {
 
 }
 
-.signIn button:hover {
+.bIn:hover {
     background-color: #eee;
     border: 1px solid #c3c3c3;
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
+/*  Log Out  */
 .loggedIn {
     display: none;
+}
+
+.signOut {
+    color: #fff;
+    text-align: right;
+    padding: 5px;
 }
 
 /*  TOP  */
@@ -83,9 +83,10 @@ body {
     margin: 20px 0;
 }
 
-.timeframe select {
+.timeframe select, .bOut {
     font-size: 1rem;
     background: #c3c3c3;
+    border-radius: 5px;
 }
 
 .blink {

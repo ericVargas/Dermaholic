@@ -2,8 +2,8 @@
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
-        document.getElementsByClassName("loggedIn").style.display = "block";
-        document.getElementsByClassName("signIn").style.display = "none";
+        document.querySelector(".loggedIn").style.display = "block";
+        document.querySelector(".signIn").style.display = "none";
 
         let user = firebase.auth().currentUser;
 
@@ -14,8 +14,8 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     } else {
         // No user is signed in.
-        document.getElementsByClassName("loggedIn").style.display = "none";
-        document.getElementsByClassName("signIn").style.display = "block";
+        document.querySelector(".loggedIn").style.display = "none";
+        document.querySelector(".signIn").style.display = "block";
     }
 });
 
@@ -23,7 +23,7 @@ function login() {
     let userEmail = document.getElementById("emailInput").value;
     let userPass = document.getElementById("passInput").value;
 
-    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
         // Handle Errors here.
         let errorCode = error.code;
         let errorMessage = error.message;
