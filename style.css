@@ -14,6 +14,61 @@ body {
     background-color: #3d3d3d;
 }
 
+/*  Sign In  */
+.sign-in {
+    color: #fff;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.sign-in h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sign-in input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 10px;
+    width: 330px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.sign-in button {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    background: #c3c3c3;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    font-size: inherit;
+    
+}
+
+.sign-in button:hover {
+    background-color: #eee;
+    border: 1px solid #c3c3c3;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.logged-in {
+    display: none;
+}
+
 /*  TOP  */
 .title {
     color: #ffffff;
@@ -93,7 +148,6 @@ input {
 
 #print,
 #submit {
-    font-size: 1rem;
     padding: .5rem;
     background: #c3c3c3;
     border: none;
@@ -149,6 +203,7 @@ h3 {
 }
 
 
+/*
 @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
     body {
         background-color: lightblue;
@@ -164,6 +219,7 @@ h3 {
         padding: 5px;
     }
 }
+*/
 
 /*
 @media (max-width: 570px) {

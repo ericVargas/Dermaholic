@@ -92,14 +92,14 @@ function displaySun() {
 function difChecked() {
     let li = document.createElement("LI");
     let liText = document.createTextNode("Differin 0.1% Gel - Apply pea size amount to full dry face after cleansing.");
-    
+
     let ul = document.createElement("UL");
     let li1 = document.createElement("LI");
     let liText1 = document.createTextNode("Avoid applying directly to under eyes, corners of mouth and creases of nose.");
-    
+
     let li2 = document.createElement("LI");
     let liText2 = document.createTextNode("Start every other night and increase to nightly as tolerated.");
-    
+
     li.appendChild(liText);
     li1.appendChild(liText1);
     li2.appendChild(liText2);
@@ -107,13 +107,13 @@ function difChecked() {
     ul.setAttribute("class", "difUL");
     ul.appendChild(li1);
     ul.appendChild(li2);
-    
-    
+
+
     if (difAM.checked == true && difPM.checked == true) {
         console.log('Both dif tf');
         amList.appendChild(li);
         pmList.appendChild(li);
-        
+
     } else if (difAM.checked == true) {
         console.log('difAM');
         amList.appendChild(li);
@@ -133,12 +133,12 @@ function cliChecked() {
     let li = document.createElement("LI");
     let liText = document.createTextNode('Clindamycin Lotion - Apply thin layer to "hot spots".');
     li.appendChild(liText);
-    
+
     if (cliAM.checked == true && cliPM.checked == true) {
         console.log('Both cli tf');
         amList.appendChild(li);
         pmList.appendChild(li);
-        
+
     } else if (cliAM.checked == true) {
         console.log('cliAM');
         amList.appendChild(li);
@@ -158,12 +158,12 @@ function mupChecked() {
     let li = document.createElement("LI");
     let liText = document.createTextNode("Mupirocin - Apply twice a day to affected areas for 7-10 days.");
     li.appendChild(liText);
-    
+
     if (mupAM.checked == true && mupPM.checked == true) {
         console.log('Both mup tf');
         amList.appendChild(li);
         pmList.appendChild(li);
-        
+
     } else if (mupAM.checked == true) {
         console.log('mupAM');
         amList.appendChild(li);
@@ -183,12 +183,12 @@ function duoChecked() {
     let li = document.createElement("LI");
     let liText = document.createTextNode("Duofilm 17% - ");
     li.appendChild(liText);
-    
+
     if (duoAM.checked == true && duoPM.checked == true) {
         console.log('Both duo tf');
         amList.appendChild(li);
         pmList.appendChild(li);
-        
+
     } else if (duoAM.checked == true) {
         console.log('duoAM');
         amList.appendChild(li);
@@ -208,12 +208,12 @@ function bpwChecked() {
     let li = document.createElement("LI");
     let liText = document.createTextNode("Benzoyl Peroxide Wash - Cleanse face every morning.");
     li.appendChild(liText);
-    
+
     if (bpwAM.checked == true && bpwPM.checked == true) {
         console.log('Both bpw tf');
         amList.appendChild(li);
         pmList.appendChild(li);
-        
+
     } else if (bpwAM.checked == true) {
         console.log('bpwAM');
         amList.appendChild(li);
@@ -233,12 +233,12 @@ function niaChecked() {
     let li = document.createElement("LI");
     let liText = document.createTextNode("Apply NIA 24 exfoiating scrub 2-3 times a week nightly.");
     li.appendChild(liText);
-    
+
     if (niaAM.checked == true && niaPM.checked == true) {
         console.log('Both nia tf');
         amList.appendChild(li);
         pmList.appendChild(li);
-        
+
     } else if (niaAM.checked == true) {
         console.log('niaAM');
         amList.appendChild(li);

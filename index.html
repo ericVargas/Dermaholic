@@ -4,11 +4,31 @@
 <head>
     <meta charset="utf-8">
     <title>Regimen</title>
-    <link href=" css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="container">
+  <!-- Login In Landing Page -->
+   <div class="sign-in">
+       <h3>Welcome to Regimen</h3>
+       <input id="emailInput" type="email" placeholder="Email.."/>
+       <input id="passInput" type="password" placeholder="Password.."/>
+       <button onclick="login()">Login In</button>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+       <!-- Actual Web App -->
+       <div class="logged-in">
         <div class="title">Regimen</div>
 
         <!-- Selectable time frame -->
@@ -22,16 +42,14 @@
             <span class="blink">Choose timeframe first, then products</span>
         </div>
         <div class="main">
-            
 
             <!-- Product list with time frame checkboxes -->
-            <!-- remove class time and product IDs-->
             <form class="product">
                 <fieldset>
                     <legend>Products</legend>
                     <div class="list">
                         <div>Differin 0.1% Gel</div>
-                        <span class="time">
+                        <span>
                             <input type="checkbox" id="difAM" onclick="difChecked()">AM
                             <input type="checkbox" id="difPM" onclick="difChecked()">PM
                         </span>
@@ -68,7 +86,7 @@
                             <input type="checkbox" id="bpwPM" onclick="bpwChecked()">PM
                         </span>
                         <br> <!-- Grid poistion break -->
-                        
+
                         <div>NIA 24</div>
                         <span class="time">
                             <input type="checkbox" id="niaAM" onclick="niaChecked()">AM
@@ -103,7 +121,7 @@
                 <input type="button" id="print" onclick="printPreview('preview')" value="Print" />
             </div>
 
-<!--
+            <!--
             <style media="print"> /* trying to remove domian name on page */
                 @page {
                 /* size: auto; */
@@ -112,13 +130,26 @@
             </style>
 -->
 
-
         </div>
         <div class="footer">
             <footer>Eric Vargas &copy; 2018</footer>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDS7NKnN5EZPR4k7E2BzeXXQnd_OFhKt0E",
+            authDomain: "dermaholic-7962a.firebaseapp.com",
+            databaseURL: "https://dermaholic-7962a.firebaseio.com",
+            projectId: "dermaholic-7962a",
+            storageBucket: "dermaholic-7962a.appspot.com",
+            messagingSenderId: "337354693718"
+        };
+        firebase.initializeApp(config);
+
+    </script>
 </body>
 
 </html>
