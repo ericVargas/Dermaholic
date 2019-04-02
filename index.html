@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <!-- Login In Landing Page -->
+    <!-- Login in Landing Page -->
     <div class="signIn">
         <h3>Welcome to Regimen</h3>
         <input id="emailInput" type="email" placeholder="Email.." />
@@ -17,107 +17,106 @@
     </div>
 
     <!-- Actual Web App -->
-    <div class="loggedIn">
-        <div class="signOut">
-            <span id="user"></span>
-            <button class="bOut" onclick="logout()">Sign Out</button>
-        </div>
-        <div class="title">Regimen</div>
+    <div class="container">
+        <div class="loggedIn">
+            <div class="signOut">
+                <span id="user"></span>
+                <button class="bOut" onclick="logout()">Sign Out</button>
+            </div>
+            <div class="title">Regimen</div>
 
-        <!-- Selectable time frame -->
-        <div class="timeframe">
-            <select onchange="timeSelect()">
-                <option value="" disabled selected>Select Timeframes</option>
-                <option id="amTF">Morning</option>
-                <option id="pmTF">Evening</option>
-                <option id="bothTF">Both</option>
-            </select>
-            <span class="blink">Choose timeframe first, then products</span>
-        </div>
-        <div class="main">
+            <!-- Selectable time frame -->
+            <div class="timeframe">
+                <select onchange="timeSelect()">
+                    <option value="" disabled selected>Select Timeframes</option>
+                    <option id="amTF">Morning</option>
+                    <option id="pmTF">Evening</option>
+                    <option id="bothTF">Both</option>
+                </select>
+                <span class="blink">Choose timeframe first, then products</span>
+            </div>
+            <div class="main">
 
-            <!-- Product list with time frame checkboxes -->
-            <form class="product">
-                <fieldset>
-                    <legend>Products</legend>
-                    <div class="list">
-                        <div>Differin 0.1% Gel</div>
-                        <span>
-                            <input type="checkbox" id="difAM" onclick="difChecked()">AM
-                            <input type="checkbox" id="difPM" onclick="difChecked()">PM
-                        </span>
-                        <span id="sun">Sunscreen
-                            <input type="checkbox" id="sunText">
-                        </span>
+                <!-- Product list with time frame checkboxes -->
+                <form class="product">
+                    <fieldset>
+                        <legend>Products</legend>
+                        <div class="list">
+                            <div>Differin 0.1% Gel</div>
+                            <span>
+                                <input type="checkbox" id="difAM" onclick="difChecked()">AM
+                                <input type="checkbox" id="difPM" onclick="difChecked()">PM
+                            </span>
+                            <span id="sun">Sunscreen
+                                <input type="checkbox" id="sunText">
+                            </span>
 
-                        <div>Clindamycin Lotion</div>
-                        <span class="time">
-                            <input type="checkbox" id="cliAM" onclick="cliChecked()">AM
-                            <input type="checkbox" id="cliPM" onclick="cliChecked()">PM
-                        </span>
-                        <span id="cmt">Additional Comments
-                            <input type="checkbox" id="comments">
-                        </span>
+                            <div>Clindamycin Lotion</div>
+                            <span class="time">
+                                <input type="checkbox" id="cliAM" onclick="cliChecked()">AM
+                                <input type="checkbox" id="cliPM" onclick="cliChecked()">PM
+                            </span>
+                            <span id="cmt">Additional Comments
+                                <input type="checkbox" id="comments">
+                            </span>
 
-                        <div>Mupirocin</div>
-                        <span class="time">
-                            <input type="checkbox" id="mupAM" onclick="mupChecked()">AM
-                            <input type="checkbox" id="mupPM" onclick="mupChecked()">PM
-                        </span>
-                        <br> <!-- Grid poistion break -->
+                            <div>Mupirocin</div>
+                            <span class="time">
+                                <input type="checkbox" id="mupAM" onclick="mupChecked()">AM
+                                <input type="checkbox" id="mupPM" onclick="mupChecked()">PM
+                            </span>
+                            <br> <!-- Grid poistion break -->
 
-                        <div>Duofilm 17%</div>
-                        <span class="time">
-                            <input type="checkbox" id="duoAM" onclick="duoChecked()">AM
-                            <input type="checkbox" id="duoPM" onclick="duoChecked()">PM
-                        </span>
-                        <br> <!-- Grid poistion break -->
+                            <div>Duofilm 17%</div>
+                            <span class="time">
+                                <input type="checkbox" id="duoAM" onclick="duoChecked()">AM
+                                <input type="checkbox" id="duoPM" onclick="duoChecked()">PM
+                            </span>
+                            <br> <!-- Grid poistion break -->
 
-                        <div>Benzoyl Peroxide Wash</div>
-                        <span class="time">
-                            <input type="checkbox" id="bpwAM" onclick="bpwChecked()">AM
-                            <input type="checkbox" id="bpwPM" onclick="bpwChecked()">PM
-                        </span>
-                        <br> <!-- Grid poistion break -->
+                            <div>Benzoyl Peroxide Wash</div>
+                            <span class="time">
+                                <input type="checkbox" id="bpwAM" onclick="bpwChecked()">AM
+                                <input type="checkbox" id="bpwPM" onclick="bpwChecked()">PM
+                            </span>
+                            <br> <!-- Grid poistion break -->
 
-                        <div>NIA 24</div>
-                        <span class="time">
-                            <input type="checkbox" id="niaAM" onclick="niaChecked()">AM
-                            <input type="checkbox" id="niaPM" onclick="niaChecked()">PM
-                        </span>
+                            <div>NIA 24</div>
+                            <span class="time">
+                                <input type="checkbox" id="niaAM" onclick="niaChecked()">AM
+                                <input type="checkbox" id="niaPM" onclick="niaChecked()">PM
+                            </span>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <!--Submit button-->
+                <div class="button">
+                    <input type="button" id="submit" onclick="previewText()" value="Submit" />
+                </div>
+
+                <!--Preview area-->
+                <div id="preview">
+                    <div class="morning">
+                        <h3>For the morning:</h3>
+                        <ul id="amList"></ul>
                     </div>
-                </fieldset>
-            </form>
-
-            <!--Submit button-->
-            <div class="button">
-                <input type="button" id="submit" onclick="previewText()" value="Submit" />
-            </div>
-
-            <!--Preview area-->
-            <div id="preview">
-                <div class="morning">
-                    <h3>For the morning:</h3>
-                    <ul id="amList"></ul>
+                    <div class="evening">
+                        <h3>For the evening:</h3>
+                        <ul id="pmList"></ul>
+                    </div>
+                    <div class="cmtText">
+                        <h3>Comments:</h3>
+                    </div>
                 </div>
-                <div class="evening">
-                    <h3>For the evening:</h3>
-                    <ul id="pmList"></ul>
-                </div>
-                <div class="cmtText">
-                    <h3>Comments:</h3>
+
+                <!--Print button-->
+                <div class="button">
+                    <input type="button" id="print" onclick="printPreview('preview')" value="Print" />
                 </div>
             </div>
-
-            <!--Print button-->
-            <div class="button">
-                <input type="button" id="print" onclick="printPreview('preview')" value="Print" />
-            </div>
-
         </div>
-        <div class="footer">
-            <footer>Eric Vargas &copy; 2019</footer>
-        </div>
+        <footer>Eric Vargas &copy; 2019</footer>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
     <script>
@@ -134,5 +133,4 @@
     </script>
     <script src="script.js"></script>
 </body>
-
 </html>
