@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regimen</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -42,50 +43,61 @@
                     <fieldset>
                         <legend>Products</legend>
                         <div class="list">
-                            <div>Differin 0.1% Gel</div>
-                            <span>
-                                <input type="checkbox" id="difAM" onclick="difChecked()">AM
-                                <input type="checkbox" id="difPM" onclick="difChecked()">PM
-                            </span>
+                            <div id="dif" class="list-item">
+                                <div>Differin 0.1% Gel</div>
+                                <span>
+                                    <input type="checkbox" id="difAM" onclick="difChecked()">AM
+                                    <input type="checkbox" id="difPM" onclick="difChecked()">PM
+                                </span>
+                            </div>
+
                             <span id="sun">Sunscreen
                                 <input type="checkbox" id="sunText">
                             </span>
 
-                            <div>Clindamycin Lotion</div>
-                            <span class="time">
-                                <input type="checkbox" id="cliAM" onclick="cliChecked()">AM
-                                <input type="checkbox" id="cliPM" onclick="cliChecked()">PM
-                            </span>
+                            <div id="cli" class="list-item">
+                                <div>Clindamycin Lotion</div>
+                                <span class="time">
+                                    <input type="checkbox" id="cliAM" onclick="cliChecked()">AM
+                                    <input type="checkbox" id="cliPM" onclick="cliChecked()">PM
+                                </span>
+                            </div>
+                            
                             <span id="cmt">Additional Comments
                                 <input type="checkbox" id="comments">
                             </span>
 
-                            <div>Mupirocin</div>
-                            <span class="time">
-                                <input type="checkbox" id="mupAM" onclick="mupChecked()">AM
-                                <input type="checkbox" id="mupPM" onclick="mupChecked()">PM
-                            </span>
-                            <br> <!-- Grid poistion break -->
+                            <div id="mup" class="list-item">
+                                <div>Mupirocin</div>
+                                <span class="time">
+                                    <input type="checkbox" id="mupAM" onclick="mupChecked()">AM
+                                    <input type="checkbox" id="mupPM" onclick="mupChecked()">PM
+                                </span>
+                            </div>
 
-                            <div>Duofilm 17%</div>
-                            <span class="time">
-                                <input type="checkbox" id="duoAM" onclick="duoChecked()">AM
-                                <input type="checkbox" id="duoPM" onclick="duoChecked()">PM
-                            </span>
-                            <br> <!-- Grid poistion break -->
+                            <div id="duo" class="list-item">
+                                <div>Duofilm 17%</div>
+                                <span class="time">
+                                    <input type="checkbox" id="duoAM" onclick="duoChecked()">AM
+                                    <input type="checkbox" id="duoPM" onclick="duoChecked()">PM
+                                </span>
+                            </div>
 
-                            <div>Benzoyl Peroxide Wash</div>
-                            <span class="time">
-                                <input type="checkbox" id="bpwAM" onclick="bpwChecked()">AM
-                                <input type="checkbox" id="bpwPM" onclick="bpwChecked()">PM
-                            </span>
-                            <br> <!-- Grid poistion break -->
+                            <div id="bpw" class="list-item">
+                                <div>Benzoyl Peroxide Wash</div>
+                                <span class="time">
+                                    <input type="checkbox" id="bpwAM" onclick="bpwChecked()">AM
+                                    <input type="checkbox" id="bpwPM" onclick="bpwChecked()">PM
+                                </span>
+                            </div>
 
-                            <div>NIA 24</div>
-                            <span class="time">
-                                <input type="checkbox" id="niaAM" onclick="niaChecked()">AM
-                                <input type="checkbox" id="niaPM" onclick="niaChecked()">PM
-                            </span>
+                            <div id="nia" class="list-item">
+                                <div>NIA 24</div>
+                                <span class="time">
+                                    <input type="checkbox" id="niaAM" onclick="niaChecked()">AM
+                                    <input type="checkbox" id="niaPM" onclick="niaChecked()">PM
+                                </span>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -132,5 +144,4 @@
         firebase.initializeApp(config);
     </script>
     <script src="script.js"></script>
-</body>
-</html>
+</body></html>

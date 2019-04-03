@@ -17,11 +17,16 @@ body {
 /*  Sign In  */
 .signIn {
     color: #fff;
-    width: 350px;
-    margin: 0 auto;
-    margin-top: 150px;
-    padding: 20px;
     font-size: 1.2rem;
+    /*  Centering login  */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 16em;
+    height: 18em;
+    margin-top: -9em;
+    margin-left: -8em;
+
 }
 
 .signIn h3 {
@@ -34,7 +39,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px 10px;
-    width: 330px;
+    width: 93.25%;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 1rem;
@@ -59,7 +64,7 @@ body {
 }
 
 /*  Log Out  */
-.container{
+.container {
     min-height: 100vh;
     position: relative;
 }
@@ -121,20 +126,23 @@ body {
 .list {
     width: 90%;
     display: grid;
-    grid-template-columns: auto auto auto;
-    /*  browser support IE/Edge (<15)  */
-    display: -ms-grid;
-    -ms-grid-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     /*    justify-items: end;*/
     font-size: 1.1rem;
     margin: 20px auto;
 }
 
-/* Grid position to line up*/
-#duo {
-    grid-column-start: 1;
-    grid-column-end: 2;
+.list-item {
+    grid-column: 1/ span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
+
+.list-item span {
+    justify-self: center;
+}
+
+/* Grid position to line up*/
 
 #sun,
 #cmt {
@@ -204,48 +212,83 @@ footer {
     margin-bottom: 50px;
 }
 
-/*
-h3 {
-    margin: 10px;
+#amList,
+#pmList,
+.cmtText h3 {
+    margin-top: 15px;
 }
-*/
 
 #print {
     display: none;
 }
 
-
-/*
-@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
-    body {
-        background-color: lightblue;
+/* MEDIA QUERIES */
+@media only screen and (max-width: 570px) {
+    .signIn input {
+        width: 93%;
     }
 
     #container {
-        width: 350px;
         margin: 0 auto;
     }
 
+    .product {
+        width: 90%;
+    }
+
+    #dif {
+        grid-area: dif;
+    }
+
+    #cli {
+        grid-area: cli;
+    }
+
+    #mup {
+        grid-area: mup;
+    }
+
+    #duo {
+        grid-area: duo;
+    }
+
+    #bpw {
+        grid-area: bpw;
+    }
+
+    #nia {
+        grid-area: nia;
+    }
+
+    #sun {
+        grid-area: sun;
+        text-align: center;
+    }
+
+    #cmt {
+        grid-area: cmt;
+        text-align: center;
+    }
+
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "dif"
+            "cli"
+            "mup"
+            "duo"
+            "bpw"
+            "nia"
+            "sun"
+            "cmt";
+    }
+
+    .list-item span {
+        justify-self: end;
+    }
+
     #preview {
-        width: 100%;
-        padding: 5px;
+        width: 75%;
+        padding: 25px 30px;
     }
 }
-*/
-
-/*
-@media (max-width: 570px) {
-    body {
-        background-color: lightblue;
-    }
-
-    #container {
-        width: 350px;
-        margin: 0 auto;
-    }
-
-    #preview {
-        width: 100%;
-        padding: 5px;
-    }
-}*/
